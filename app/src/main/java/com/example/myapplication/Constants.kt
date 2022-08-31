@@ -11,7 +11,7 @@ object Constants {
             "ug",
             "tanzania",
             "burundi",
-            "1"
+            "1".toInt()
         )
         questionlist.add(que1)
 
@@ -24,7 +24,7 @@ object Constants {
             "ug",
             "tanzania",
             "burundi",
-            "1"
+            "1".toInt()
         )
         questionlist.add(que2)
 
@@ -36,7 +36,8 @@ object Constants {
             "ug",
             "tanzania",
             "burundi",
-            "1"
+            "1".toInt()
+
         )
         questionlist.add(que2)
 
@@ -48,7 +49,7 @@ object Constants {
             "ug",
             "tanzania",
             "burundi",
-            "1"
+            "1".toInt()
         )
         questionlist.add(que4)
         return questionlist

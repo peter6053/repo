@@ -36,8 +36,15 @@ class quizactivity : AppCompatActivity(), View.OnClickListener {
 
     private fun setquestions() {
         val question: Question? = mquestionlist!!.get(mcurrentpostion - 1)
-
         defaultOptionsView()
+
+        if (mcurrentpostion == mquestionlist!!.size) {
+            btn_submit.text = "finished"
+        } else {
+            btn_submit.text = "submit"
+        }
+
+
         progress_dilaog.progress = mcurrentpostion
         tv_progress.text = "$mcurrentpostion" + "/" + progress_dilaog.max
         image.setImageResource(question!!.image)
@@ -81,19 +88,37 @@ class quizactivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_submit -> {
                 if (mselectepostion == 0) {
                     mcurrentpostion++
+                } else {
+                    val question = mquestionlist?.get(mcurrentpostion - 1)
+                    if (question != null) {
+                        if (question.correctanswer != mselectepostion) {
+                            answerview(mselectepostion, R.drawable.wrongoptionbodar)
+                        }
+                    }
+                    if (question != null) {
+                        answerview(question.correctanswer, R.drawable.correctoptionbodar)
+                    }
+
+                    if (mcurrentpostion == mquestionlist!!.size) {
+                        btn_submit.text = "finish"
+                    } else
+                        btn_submit.text = "go to net question"
                 }
-                when {mcurrentpostion <= mquestionlist!!.size ->
-                    setquestions()
+                mselectepostion = 0
+                when {
+                    mcurrentpostion <= mquestionlist!!.size ->
+                        setquestions()
                     else ->
-                        Toast.makeText(this, "you have completed the quiz", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "you have completed the quiz", Toast.LENGTH_LONG)
+                            .show()
 
                 }
-
-
-
 
             }
+
+
         }
+
 
     }
 
