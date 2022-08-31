@@ -91,6 +91,16 @@
             android:padding="15dp"
             android:textSize="16dp"
             tools:text="kenya" />
+        <TextView
+            android:id="@+id/tv_option_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/kenyanjflag"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="16dp"
+            tools:text="kenya" />
         <Button
             android:id="@+id/submit"
             android:layout_width="match_parent"
