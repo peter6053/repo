@@ -9,10 +9,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_gashomepage)
 
         //  window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE
-        btn_start.setOnClickListener {
+      /*  btn_start.setOnClickListener {
             if (et_name.text.toString().isEmpty()) {
                 Toast.makeText(this, "please enter your name", Toast.LENGTH_LONG).show()
             } else {
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-        }
+        }*/
 
 
     }
