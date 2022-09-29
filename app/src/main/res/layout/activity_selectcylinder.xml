@@ -18,9 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Get Started by selecting the gas Type"
+            android:text="Next please select your cylinder"
             android:textColor="#000000"
             android:textSize="20sp"
+            android:textStyle="bold"
 
             />
 
@@ -28,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alignmentMode="alignMargins"
-            android:columnCount="2"
+            android:columnCount="1"
             android:columnOrderPreserved="false"
             android:paddingTop="15dp"
             android:rowCount="3">
@@ -40,47 +41,49 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="12dp"
                 android:elevation="6dp"
-               app:cardCornerRadius="12dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="2dp">
 
                     <ImageView
+                        android:id="@+id/sickgs"
                         android:layout_width="100dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/totalgas" />
+                        android:src="@drawable/totalgascylinder" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical"
+                        >
 
                         <TextView
                             android:id="@+id/treavel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:text="Total Gas"
+                            android:text="Total Gas 6kg"
                             android:textColor="@color/black"
                             android:textSize="15sp"
-                            android:textStyle="bold" />
-
+                            android:textStyle="bold"
+                           />
                         <TextView
+                            android:id="@+id/totalprice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:layout_marginTop="10dp"
-                            android:text="83%"
+                            android:layout_marginTop="12dp"
+                            android:text="ksh1250"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:visibility="gone"
+                            android:textSize="15sp"
 
-                            />
+                           />
+
+
                     </LinearLayout>
 
 
@@ -97,47 +100,8 @@
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:elevation="6dp"
-                app:cardCornerRadius="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/kobilgas" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/stationery"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="Kobil Gas"
-                            android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -158,66 +122,33 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/mamagas" />
+                        android:src="@drawable/progascylinder"
+
+                        />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/treavel2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="Mama Gas"
-                            android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:elevation="6dp"
-                app:cardCornerRadius="12dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/progas" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/grocery"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:text="Pro Gas"
+                            android:text="Pro Gas 12kg"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/progasprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="ksh 1250"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -233,11 +164,11 @@
 
 
         <Button
-            android:id="@+id/btn_continue"
+            android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Continue"
+            android:text="ORDER"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:backgroundTint="@color/purple_500"

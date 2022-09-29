@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".selectcylinder"
+            android:exported="false" />
+        <activity
             android:name=".gashomepage"
             android:exported="false" />
         <activity

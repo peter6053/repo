@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_gashomepage.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.btn_start
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,15 +14,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_gashomepage)
 
         //  window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE
-      /*  btn_start.setOnClickListener {
-            if (et_name.text.toString().isEmpty()) {
-                Toast.makeText(this, "please enter your name", Toast.LENGTH_LONG).show()
-            } else {
-                val intent = Intent(this, quizactivity::class.java)
+        btn_continue.setOnClickListener {
+
+                val intent = Intent(this, selectcylinder::class.java)
                 startActivity(intent)
                 finish()
             }
-        }*/
+
 
 
     }
